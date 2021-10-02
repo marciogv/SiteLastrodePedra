@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100;800&display=swap');
+
+
+:root {
+    --color-background-context: rgba(138, 135, 135, 0.080);
+    --color-border: rgba(114, 112, 112, 0.144);
+    --border-menu: 0.1rem solid rgba(114, 112, 112, 0.144);
+    --color-entregas: rgba(138, 135, 135, 0.068);
+    --color-background-grid: rgba(163, 159, 159, 0.08);
+    --font-menu: 'ZCOOL KuaiLe', cursive;
+    --font-main-page:  'Glory', sans-serif;
+    --border-radius: 1%;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    /* margin: 0 auto; */
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: justify;
+    font-family: var(--font-main-page);
+}
+
+:target {
+    scroll-margin-top: 10rem;
+}
+
+/* Fontes */
+
+h1 {
+    margin: 1rem 3rem 0 0;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.comp-card {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+h4 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Setores Gerais */
+
+.main-context {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-context{
+    border-bottom: var(--border-menu);
+    background: white;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+}
+
+/* Caixas dos setores */
+
+.section-context{
+    /* min-height: 100vh; */
+    max-width: 120rem;
+    margin: 2rem auto;
+    background: var(--color-background-context);
+    padding: 3rem 3rem;
+    border-radius: var(--border-radius);
+    font-size: 2rem;
+}
+
+/* Blocos Flex - texto e img */
+
+.bloco {
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+/* Menu */
+
+/* .logo-fixed, .nav__button, .nav__icon, .nav__checkbox {
+    display: none;
+} */
+
+.menu-media-query {
+    display: none;
+}
+
+/* .nav__checkbox {display: none;  } */
+
+.menu-content {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 120rem;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+.menu-context .menu-content nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    box-sizing: content-box;
+}
+
+.menu-context .menu-content nav ul li a{
+    display: block;
+    box-sizing: content-box;
+    position: relative;
+    height: 3rem;
+    margin: 1.58rem;
+}
+
+.menu-context .menu-content nav ul li {
+    position: relative;
+
+}
+
+.menu-context .menu-content nav ul li a::after{
+    position: absolute;
+    content: '';
+    bottom: -1.3rem;
+    left: 0;
+    width: 0;
+    height: 0.01rem;
+    background: var(--color-border);
+    transition: all 300ms ease-in-out;
+}
+.menu-context .menu-content nav ul li a::before{
+    position: absolute;
+    content: '';
+    top: -0.8rem;
+    right: 0;
+    width: 0;
+    height: 0.02rem;
+    background: var(--color-border);
+    transition: all 300ms ease-in-out;
+}
+
+.menu-context .menu-content nav ul li a:hover::after{
+    width: 100%;
+}
+
+.menu-context .menu-content nav ul li a:hover::before{
+    width: 100%;
+}
+
+.linha-vertical {
+    border-right: var(--border-menu);
+    height: 3rem;
+}
+
+.logo-link {
+    margin-top: 3rem;
+}
+
+#logo {
+    display: block;
+    height: 5rem;
+    width: 6rem;
+    margin-top: 0.7rem;
+}
+
+.links {
+    display: block;
+    font-family: var(--font-menu);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 1s ease;
+    color: black;
+}
+
+.links:visited{
+    color:black;
+}
+
+
+/* Quem somos */
+
+.sobre-nos {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 10rem;
+}
+
+.descricao {
+    display: flex;
+}
+
+.img-desc {
+    max-width: 40rem;
+    max-height: 30rem;
+    margin-right: 5rem;
+    border-radius: var(--border-radius);
+}
+
+.text-desc {
+    font-size: 2rem;
+}
+
+.entregas {
+    background: var(--color-entregas);
+    border-radius: 1%;
+    display: flex;
+    margin: 2rem 2rem;
+}
+
+.all-entregas {
+    padding: 2rem;
+    border: var(--border-menu);
+    border-radius: var(--border-radius);
+}
+
+.log-entrega {
+    float: left;
+    margin-right: 1rem;
+}
+
+.mapas-context {
+    margin: 4rem auto 0 auto;
+    width: 80rem;
+    max-width: 100%; 
+}
+
+.mapa {
+    border-radius: var(--border-radius);
+    max-width: 100%; 
+}
+
+/* Cardápio */
+
+.fotos {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(1fr, 21rem)); */
+    gap: 1rem;
+}
+
+.grid-produtos {
+    /* margin-bottom: 5rem; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 50rem));
+    /* grid-template-rows: repeat(auto-fill, minmax(1fr, 21rem)); */
+    gap: 1rem;
+}
+
+.ultima-fotos{
+    margin-bottom: 0rem;
+}
+
+.foto {
+    height: 25rem;
+    width: 100%;
+    object-fit: contain;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--color-background-grid);
+}
+
+.foto a{
+    height: 100%;
+    width: 100%;
+}
+
+.legenda-foto{
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+/* .foto::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Broa Caxambu";
+    color: white;
+    background: rgba(0, 0, 0, 0.377);
+    border-radius: var(--border-radius);
+} */
+
+.imagem {
+    height: 100%;
+    width: 100%;
+    max-width: 46rem;
+    max-height: 46rem;
+    object-fit: fill;
+    border-radius: var(--border-radius);
+}
+
+/* Produtos*/
+
+.produto-flex {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--color-background-grid);
+}
+
+.logos-produtos-flex {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(5rem, 1fr));
+   margin-top: 1.5rem;
+}
+
+.logo-produto-flex {
+   display: flex;
+}
+
+.img-logo-produto {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+/* Redes */
+
+.contato-context {
+    display: flex;
+    margin: 0 auto;
+    width: 50rem;
+    justify-content: center;
+}
+
+
+
+.logos{
+    width: 10rem;
+    height: 10rem;
+}
+
+.logo-ifood{
+    width: 20rem;
+    height: 10rem;
+}
+
+
+
+.contato {
+    /* background: red; */
+    margin: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Rodapé */
+
+.footer {
+    width: 40rem;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0rem;
+}
+
+/* Media Quarie */
+
+@media (max-width: 1071px) {
+
+    .section-context {
+        /* width: 100%; */
+        min-width: 100%;
+        max-width: 100%;
+        margin: 2 rem 0;
+    }
+
+    .img-desc {max-width: 100%;
+    max-height: 100%;
+    }
+
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+    .imagem {
+    max-width: 100%;
+    max-height: 100%;
+    }
+    .descricao {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-context{
+        max-width: 100%;
+        min-width: 100%;
+        /* width: 120rem; */
+        margin: 2rem 0;
+        /* padding: 0 0; */
+    }
+
+    .sobre-nos {
+        margin: 8rem 0;
+    }
+    .menu-content, .menu-context{
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+    /* .links {
+        font-size: 1rem;
+    } */
+}
+
+@media (max-width: 991.98px) {
+    .fotos {
+        grid-template-columns: repeat(2, minmax(1fr, 1fr));
+    }
+
+    /* .logo-fixed, .nav__button, .nav__icon, .nav__checkbox {
+        display: block;
+    } */
+
+    .menu-media-query {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        border-radius: var(--border-menu);
+        background: white;
+    }
+    
+
+    .menu-context{
+        border-right: var(--border-menu);
+        background: white;
+        width: 20rem;
+        height: 100%;
+        left: 0;
+        /* top: 0; */
+        z-index: 1;
+        transform: translateX(-50rem);
+        transition: all 1s ease-in-out;
+    }
+
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* margin: 1rem auto;
+        max-width: 120rem; */
+        /* padding-top: 7rem; */
+        font-size: 3rem;
+        z-index: 1;
+    }
+    
+    .menu-context .menu-content nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+        box-sizing: content-box;
+    }
+
+    .linha-vertical {
+        border-top: var(--border-menu);
+        border-right: none;
+        width: 5rem;
+        height: 0;
+    }
+
+    .menu-content h1 {
+        margin: 1.5rem;
+    }
+
+    .logo-link {
+        margin-top: 3rem;
+    }
+
+    .menu-context .menu-content nav ul li a:hover::after{
+        width: 0%;
+    }
+    
+    .menu-context .menu-content nav ul li a:hover::before{
+        width: 0%;
+    }
+    
+   
+    .nav__checkbox {display: none;  }
+
+    .nav__button {
+    position: fixed;
+    top: 0.5rem;
+    left: 1rem;
+    margin: 1.5rem;
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(138, 135, 135, 0.190);
+    z-index: 3000;
+    }
+
+    .nav__button:hover {box-shadow: 0 0.1rem 2rem rgba(18, 18, 18, 0.2);}
+
+    .nav__checkbox:checked ~ .menu-context {
+        transform: translateX(0rem);
+    }
+
+    .nav__checkbox:checked + .nav__button .nav__icon {
+        background-color: transparent;
+      }
+      
+      .nav__checkbox:checked + .nav__button .nav__icon::before {
+        transform: rotate(135deg);
+      }
+      
+      .nav__checkbox:checked + .nav__button .nav__icon::after {
+        transform: rotate(-135deg);
+      }
+
+    .menu-context .menu-content h1 a {
+        display: none;
+    }
+
+    .menu-context .menu-content nav {
+        margin-top: 5rem;
+    }
+
+    .logo-fixed {
+    position: fixed;
+    top: 0.5rem;
+    left: 45%;
+    }
+
+    .nav__button:hover {box-shadow: 0 0.1rem 2rem rgba(18, 18, 18, 0.2);}
+
+    .nav__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .nav__icon::before,
+    .nav__icon::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: all 1s;
+    /* transition: all 0.2s; */
+    }
+
+
+    .nav__icon,
+    .nav__icon::before,
+    .nav__icon::after {
+    width: 1.75rem;
+    height: 0.4rem;
+    background-color: black;
+    }
+
+    .nav__icon:before {
+    transform: translateY(-150%) rotate(0deg) scale(1) skewX(15deg);
+    }
+    
+    .nav__icon:after {
+    transform: translateY(150%) rotate(0deg) scale(1) skewX(-15deg);
+    }
+      
+}
+ 
+
+@media (max-width: 560px) {
+    .entregas {flex-direction: column;}
+
+    .contato-context {
+        flex-direction: column;
+        align-items: center;
+    }
+}   
+
+
+/* @media (max-width: 904px) {.descricao {flex-direction: column;}} */
+
+/* @media (min-width: 490px) and (max-width: 720px) {.caixa {width: 50%;}}
+
+@media (max-width: 490px) {.caixa {width: 100%;}}  */
+
+
+
+/* Setores */
+
