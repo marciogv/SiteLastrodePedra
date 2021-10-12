@@ -7,10 +7,27 @@
     <title>Padaria Lastro de Pedra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <div class="pagina-toda">
+        <figure class="foto-ampliada">
+            <div class="context-imagem-ampliada"><img class="imagem-ampliada" src="assets/img/pao_azeitona.jpeg" alt="Pão de Azeitona"></div>
+            <div class="info-produto">
+                <figcaption class="legenda-foto-ampliada text-produto"><h4 class="titulo-produto">Pão de Azeitona</h4></figcaption>
+                <p class="text-produto descricao-produto">Feito com azeitona preta, manjericão e cúrcuma.</p>
+                <div class="logos-produto-ampliado-context">
+                    <div class="logo-produto-flex logo-foto-ampliada logo-vegano"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
+                    <div class="logo-produto-flex logo-foto-ampliada logo-vegetariano"><img src="assets/img/vegetariano.png" alt="Logo Vegetariano" class="img-logo-produto "><p>Vegetariano</p></div>
+                    <div class="logo-produto-flex logo-foto-ampliada logo-sugarfree"><img src="assets/img/sugar-free.png" alt="Logo Sem Açucar" class="img-logo-produto logo-sugarfree"><p>Sem Açucar</p></div>
+                    <div class="logo-produto-flex logo-foto-ampliada logo-lactosefree"><img src="assets/img/lactose-free.png" alt="Logo Sem Lactose" class="img-logo-produto"><p>Sem Lactose</p></div>                    
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </figure>
+    </div>
+
     <div class="menu-media-query"></div>
     <input type="checkbox"  class="nav__checkbox" id="nav-toggle">
     <label for="nav-toggle" class="nav__button">
@@ -27,9 +44,9 @@
                     <li class="linha-vertical"></li>
                     <li><a class="links" href="#">Sobre nós</a></li>
                     <li class="linha-vertical"></li>
-                    <li><a class="links" href="#cardapio">Cardápio</a></li>
+                    <li><a id="menu-cardapio" class="links" href="#cardapio">Cardápio</a></li>
                     <li class="linha-vertical"></li>
-                    <li><a class="links" href="#produtos">Produtos</a></li>
+                    <li><a id="menu-produtos" class="links" href="#produtos">Produtos</a></li>
                     <li class="linha-vertical"></li>
                     <li><a class="links" href="#contato">Contato</a></li>
                     <li class="linha-vertical"></li>
@@ -44,7 +61,7 @@
                 <div class="descricao">
                     <figure class="img"><img src="assets/img/fundo2.jpeg" alt="Imagem Produtos Padaria" class="img-desc"></figure>
                     <span><p class="text-desc"> Somos uma micropadaria artesanal que confecciona todos os seus produtos de forma manual e com produtos naturais. 
-                    As massas são manipuladas com as mãos, o fermento (lavain) somos nós que cultivamos, e os ingredientes são criteriosamente escolhidos sempre 
+                    As massas são manipuladas com as mãos, o fermento (levain) somos nós que cultivamos, e os ingredientes são criteriosamente escolhidos sempre 
                     buscando a melhor experiência para o consumidor.
                     O nosso chef padeiro usa a técnica de longa fermentação em todos os pães produzidos pela padaria com 100% de fermentação natural. 
                     Não usamos fermento industrializado.
@@ -57,13 +74,11 @@
                 <div class="entregas">
                     <span class="entrega-ifood all-entregas">   
                         <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/lastro-de-pedra-jaguare" target="_blank"><img src="assets/img/log-ifood.png" alt="Logo Ifood" class="log-entrega" height="50px" width="80px"></a>
-                        <p class="teste">Entregas são feitas aos finais de semana e feriados (08h as 18h ininterruptamente). 
-                            Nesta modalidade os paẽs e outros produtos vem fresquinhos, prontos para o consumo imediato.</p>
+                        <p class="teste">Entregas são feitas aos finais de semana e feriados (08h as 18h ininterruptamente).</p>
                     </span>
                     <span class="entrega-propria all-entregas"> 
                         <img src="assets/img/caminhao2.png" alt="Logo Caminhão" class="log-entrega" height="50px" width="85px">
-                        <p>Entregas próprias: às quintas-feiras realizamos entregas em uma área mais ampliada, 
-                        com produtos frequinhos também mas necessitando da finalização dos próprios clientes.</p> 
+                        <p>Entregas próprias: às quintas-feiras realizamos entregas em uma área mais ampliada, cobrindo toda a área do Ifood mais alguns bairros.</p> 
                     </span> 
                 </div>
                 <p>Abaixo você pode ver no mapa a área correspondente ao tipo de entrega</p>
@@ -76,28 +91,28 @@
             <h2>Cardápio <i class="comp-card">(clique sobre as fotos para maiores informações)</i></h2>
             <h3>Pães<i class="comp-card"> - todos os nossos pães são artesanais e de fermentação natural</i></h3>
             <div class="fotos">
-                <figure class="foto"><a href="#pao-azeitona"><img class="imagem" src="assets/img/pao_azeitona.jpeg" alt="Pão de Azeitona"></a><figcaption class="legenda-foto">Pão de Azeitona</figcaption></figure>
-                <figure class="foto"><a href="#pao-cacau"><img class="imagem" src="assets/img/pao_cacau.jpeg" alt="Pão de Cacau"></a><figcaption class="legenda-foto">Pão de Cacau</figcaption></figure>
-                <figure class="foto"><a href="#pao-integral"><img class="imagem" src="assets/img/pao_integral.jpeg" alt="Pão Integral"></a><figcaption class="legenda-foto">Pão Integral</figcaption></figure>
-                <figure class="foto"><a href="#pao-multigraos"><img class="imagem" src="assets/img/pao_multigraos.jpeg" alt="Pão Multigrãos"></a><figcaption class="legenda-foto">Pão Multigrãos</figcaption></figure>
-                <figure class="foto"><a href="#pao-rustico"><img class="imagem" src="assets/img/pao_rustico.jpeg" alt="Pão Rústico"></a><figcaption class="legenda-foto">Pão Rústico</figcaption></figure>
-                <figure class="foto"><a href="#pao-exotico"><img class="imagem" src="assets/img/pao-exotico.jpeg" alt="Pão Exótico"></a><figcaption class="legenda-foto">Pão Exótico</figcaption></figure>
-                <figure class="foto"><a href="#focaccia"><img class="imagem" src="assets/img/focaccia.jpeg" alt="Focaccia"></a><figcaption class="legenda-foto">Focaccia</figcaption></figure>
-                <figure class="foto"><a href="#grissini"><img class="imagem" src="assets/img/grissini.jpeg" alt="Grissini"></a><figcaption class="legenda-foto">Grissini</figcaption></figure>
+                <figure class="foto"><img class="imagem azeitona" src="assets/img/pao_azeitona.jpeg" alt="Pão de Azeitona"><figcaption class="legenda-foto">Pão de Azeitona</figcaption></figure>
+                <figure class="foto"><img class="imagem cacau" src="assets/img/pao_cacau.jpeg" alt="Pão de Cacau"><figcaption class="legenda-foto">Pão de Cacau</figcaption></figure>
+                <figure class="foto"><img class="imagem integral" src="assets/img/pao_integral.jpeg" alt="Pão Integral"><figcaption class="legenda-foto">Pão Integral</figcaption></figure>
+                <figure class="foto"><img class="imagem multigraos" src="assets/img/pao_multigraos.jpeg" alt="Pão Multigrãos"><figcaption class="legenda-foto">Pão Multigrãos</figcaption></figure>
+                <figure class="foto"><img class="imagem rustico" src="assets/img/pao_rustico.jpeg" alt="Pão Rústico"><figcaption class="legenda-foto">Pão Rústico</figcaption></figure>
+                <figure class="foto"><img class="imagem exotico" src="assets/img/pao-exotico.jpeg" alt="Pão Exótico"><figcaption class="legenda-foto">Pão Exótico</figcaption></figure>
+                <figure class="foto"><img class="imagem focaccia" src="assets/img/focaccia.jpeg" alt="Focaccia"><figcaption class="legenda-foto">Focaccia</figcaption></figure>
+                <figure class="foto"><img class="imagem grissini" src="assets/img/grissini.jpeg" alt="Grissini"><figcaption class="legenda-foto">Grissini</figcaption></figure>
             </div>
             <h3>Quiches</h3>
             <div class="fotos">
-                <figure class="foto"><a href="#quiche"><img class="imagem" src="assets/img/quiche.jpeg" alt="Quiche Lorraine"></a><figcaption class="legenda-foto">Quiche Lorraine</figcaption></figure>
+                <figure class="foto"><img class="imagem quiche" src="assets/img/quiche.jpeg" alt="Quiche Lorraine">><figcaption class="legenda-foto">Quiche Lorraine</figcaption></figure>
             </div>
             <h3>Cereais</h3>
             <div class="fotos">
-                <figure class="foto"><a href="#granola"><img class="imagem" src="assets/img/granola2.jpg" alt="Granola"></a><figcaption class="legenda-foto">Granola</figcaption></figure>
+                <figure class="foto"><img class="imagem granola" src="assets/img/granola2.jpg" alt="Granola"><figcaption class="legenda-foto">Granola</figcaption></figure>
             </div>
             <h3>Sobremesas</h3>
             <div class="fotos ultima-fotos">
-                <figure class="foto"><a href="#torta-chocolate"><img class="imagem" src="assets/img/torta-chocolate.jpg" alt="Torta de Chocolate"></a><figcaption class="legenda-foto">Torta de Chocolate</figcaption></figure>
-                <figure class="foto"><a href="#broa"><img class="imagem" src="assets/img/broa-caxambu.jpeg" alt="Broa Caxambu"></a><figcaption class="legenda-foto">Broa Caxambu</figcaption></figure>
-                <figure class="foto"><a href="#cookie"><img class="imagem" src="assets/img/cookie.jpeg" alt="Cookie"></a><figcaption class="legenda-foto">Cookie</figcaption></figure>
+                <figure class="foto"><img class="imagem torta-chocolate" src="assets/img/torta-chocolate.jpg" alt="Torta de Chocolate"><figcaption class="legenda-foto">Torta de Chocolate</figcaption></figure>
+                <figure class="foto"><img class="imagem broa" src="assets/img/broa-caxambu.jpeg" alt="Broa Caxambu"><figcaption class="legenda-foto">Broa Caxambu</figcaption></figure>
+                <figure class="foto"><img class="imagem cookie" src="assets/img/cookie.jpeg" alt="Cookie"><figcaption class="legenda-foto">Cookie</figcaption></figure>
             </div>
         </section>
         <section id="produtos" class="produtos section-context">
@@ -106,7 +121,7 @@
             <div class="grid-produtos">
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="pao-azeitona"><h4>Pão de Azeitona</h4></figcaption>
-                    <img  class="imagem" src="assets/img/pao_azeitona.jpeg" alt="Pão de Azeitona">
+                    <img  class="imagem-media" src="assets/img/pao_azeitona.jpeg" alt="Pão de Azeitona">
                     <p>Feito com azeitona preta, manjericão e cúrcuma.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -119,7 +134,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="pao-cacau"><h4>Pão de Cacau</h4></figcaption>
-                    <img class="imagem" src="assets/img/pao_cacau.jpeg" alt="Pão de Cacau">
+                    <img class="imagem-media" src="assets/img/pao_cacau.jpeg" alt="Pão de Cacau">
                     <p>Pão adocicado com cacau, chocolate e frutas cristalizadas.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -128,7 +143,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="pao-integral"><h4>Pão Integral</h4></figcaption>
-                    <img class="imagem" src="assets/img/pao_integral.jpeg" alt="Pão Integral">
+                    <img class="imagem-media" src="assets/img/pao_integral.jpeg" alt="Pão Integral">
                     <p>100% farinha integral.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -141,7 +156,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="pao-multigraos"><h4>Pão Multigrãos</h4></figcaption>
-                    <img class="imagem" src="assets/img/pao_multigraos.jpeg" alt="Pão de Cacau">
+                    <img class="imagem-media" src="assets/img/pao_multigraos.jpeg" alt="Pão de Cacau">
                     <p>Quinoa, chia, linhaça, gergelim, semente de girassol.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -154,7 +169,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="pao-rustico"><h4>Pão Rústico</h4></figcaption>
-                    <img class="imagem" src="assets/img/pao_rustico.jpeg" alt="Pão Rústico">
+                    <img class="imagem-media" src="assets/img/pao_rustico.jpeg" alt="Pão Rústico">
                     <p>Uma mistura de farinhas branca e integral, água e sal.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -167,7 +182,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="pao-exotico"><h4>Pão Exótico</h4></figcaption>
-                    <img class="imagem" src="assets/img/pao-exotico.jpeg" alt="Pão Exótico">
+                    <img class="imagem-media" src="assets/img/pao-exotico.jpeg" alt="Pão Exótico">
                     <p>Tâmara, gengibre e castanha do pará.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -180,7 +195,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="focaccia"><h4>Focaccia de tomate</h4></figcaption>
-                    <img class="imagem" src="assets/img/focaccia.jpeg" alt="Focaccia de tomate">
+                    <img class="imagem-media" src="assets/img/focaccia.jpeg" alt="Focaccia de tomate">
                     <p>Pão clássico italiano leve com azeite, tomate cereja, alecrim e flor de sal.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -193,7 +208,7 @@
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="grissini"><h4>Grissini</h4></figcaption>
-                    <img class="imagem" src="assets/img/grissini.jpeg" alt="Grissini">
+                    <img class="imagem-media" src="assets/img/grissini.jpeg" alt="Grissini">
                     <p>Palitos crocantes com sementes e azeite (assados). Feito com levain.</p>
                     <div class="logos-produtos-flex">
                         <div class="logo-produto-flex"><img src="assets/img/vegan.png" alt="Logo vegano" class="img-logo-produto"><p>Vegano</p></div>
@@ -208,30 +223,30 @@
             <h3>Quiches</h3>
             <figure class="produto-flex">
                 <figcaption class="legenda-foto" id="quiche"><h4>Quiche Lorraine</h4></figcaption>
-                <img class="imagem" src="assets/img/quiche.jpeg" alt="Quiche Lorraine">
+                <img class="imagem-media" src="assets/img/quiche.jpeg" alt="Quiche Lorraine">
                 <p>Ingredientes: Farinha, manteiga, ovo, sal,  pimenta do reino, noz moscada, queijo, bacon creme de leite.</p>
             </figure>
             <h3>Cereais</h3>
             <figure class="produto-flex">
                 <figcaption class="legenda-foto" id="granola"><h4>Granola</h4></figcaption>
-                <img class="imagem" src="assets/img/granola2.jpg" alt="Granola">
+                <img class="imagem-media" src="assets/img/granola2.jpg" alt="Granola">
                 <p>Com oleaginosas(castanhas), chia, linhaça, açúcar mascavo e mel de abelha.</p>
             </figure>
             <h3>Sobremesas</h3>
             <div class="grid-produtos">
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="torta-chocolate"><h4>Torta de Chocolate</h4></figcaption>
-                    <img class="imagem" src="assets/img/torta-chocolate.jpg" alt="Torta de Chocolate">
+                    <img class="imagem-media" src="assets/img/torta-chocolate.jpg" alt="Torta de Chocolate">
                     <p>Torta de chocolate meio amargo com uma cobertura de chocolate e amêndoas, e uma massa crocante envolvendo tudo isso.</p>
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="broa"><h4>Broa Caxambu</h4></figcaption>
-                    <img class="imagem" src="assets/img/broa-caxambu.jpeg" alt="Broa Caxambu">
+                    <img class="imagem-media" src="assets/img/broa-caxambu.jpeg" alt="Broa Caxambu">
                     <p>Broas com fubá e um perfume de erva doce.</p>
                 </figure>
                 <figure class="produto-flex">
                     <figcaption class="legenda-foto" id="cookie"><h4>Cookie</h4></figcaption>
-                    <img class="imagem" src="assets/img/cookie.jpeg" alt="Cookie">
+                    <img class="imagem-media" src="assets/img/cookie.jpeg" alt="Cookie">
                     <p>Com chocolate callebaut e açúcar orgânico.</p>
                 </figure>
             </div> 
@@ -247,6 +262,6 @@
         </section>     
         <div class="footer">Desenvolvido por --> El Cat Desenolvimento de Sites e Softwares</div>
     </section>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
-

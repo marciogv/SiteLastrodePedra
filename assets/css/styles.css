@@ -8,7 +8,7 @@
     --border-menu: 0.1rem solid rgba(114, 112, 112, 0.144);
     --color-entregas: rgba(138, 135, 135, 0.068);
     --color-background-grid: rgba(163, 159, 159, 0.08);
-    --font-menu: 'ZCOOL KuaiLe', cursive;
+    --font-menu: 'Amatic SC', cursive;
     --font-main-page:  'Glory', sans-serif;
     --border-radius: 1%;
 }
@@ -76,7 +76,6 @@ h4 {
 /* Caixas dos setores */
 
 .section-context{
-    /* min-height: 100vh; */
     max-width: 120rem;
     margin: 2rem auto;
     background: var(--color-background-context);
@@ -94,15 +93,11 @@ h4 {
 
 /* Menu */
 
-/* .logo-fixed, .nav__button, .nav__icon, .nav__checkbox {
-    display: none;
-} */
 
 .menu-media-query {
     display: none;
 }
 
-/* .nav__checkbox {display: none;  } */
 
 .menu-content {
     display: flex;
@@ -126,13 +121,12 @@ h4 {
     display: block;
     box-sizing: content-box;
     position: relative;
-    height: 3rem;
+    height: 100%;
     margin: 1.58rem;
 }
 
 .menu-context .menu-content nav ul li {
     position: relative;
-
 }
 
 .menu-context .menu-content nav ul li a::after{
@@ -184,6 +178,7 @@ h4 {
     display: block;
     font-family: var(--font-menu);
     font-weight: bold;
+    font-size: 4rem;
     text-decoration: none;
     transition: all 1s ease;
     color: black;
@@ -193,6 +188,9 @@ h4 {
     color:black;
 }
 
+#menu-produtos{
+    display: none;
+}
 
 /* Quem somos */
 
@@ -218,7 +216,6 @@ h4 {
 }
 
 .entregas {
-    background: var(--color-entregas);
     border-radius: 1%;
     display: flex;
     margin: 2rem 2rem;
@@ -228,6 +225,15 @@ h4 {
     padding: 2rem;
     border: var(--border-menu);
     border-radius: var(--border-radius);
+}
+
+.entrega-ifood {
+    background: rgba(236, 72, 72, 0.150);
+    flex-basis: 100rem;
+}
+
+.entrega-propria {
+    background: rgba(18, 131, 18, 0.150);
 }
 
 .log-entrega {
@@ -252,16 +258,13 @@ h4 {
     margin-bottom: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    /* grid-template-rows: repeat(auto-fill, minmax(1fr, 21rem)); */
     gap: 1rem;
 }
 
 .grid-produtos {
-    /* margin-bottom: 5rem; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 50rem));
-    /* grid-template-rows: repeat(auto-fill, minmax(1fr, 21rem)); */
     gap: 1rem;
 }
 
@@ -273,7 +276,6 @@ h4 {
     height: 25rem;
     width: 100%;
     object-fit: contain;
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -290,17 +292,17 @@ h4 {
     font-weight: bold;
 }
 
-/* .foto::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "Broa Caxambu";
-    color: white;
-    background: rgba(0, 0, 0, 0.377);
-    border-radius: var(--border-radius);
-} */
-
 .imagem {
+    height: 100%;
+    width: 100%;
+    max-width: 46rem;
+    max-height: 46rem;
+    object-fit: fill;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.imagem-media {
     height: 100%;
     width: 100%;
     max-width: 46rem;
@@ -311,11 +313,14 @@ h4 {
 
 /* Produtos*/
 
+.produtos {
+    display: none;
+}
+
 .produto-flex {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -342,8 +347,6 @@ h4 {
 
 .contato-context {
     display: flex;
-    /* margin: 0 auto;
-    width: 50rem; */
     justify-content: center;
 }
 
@@ -376,9 +379,96 @@ h4 {
     right: 0rem;
 }
 
+/* Foto ampliada */
+
+.foto-ampliada {
+    width: 100rem;
+    height: 60rem;
+    margin: 0 auto;
+    display: flex;
+    background: rgb(206, 204, 204);
+    padding: 2rem 1rem 2rem 2rem;
+}
+
+.context-imagem-ampliada {
+    flex-basis: 150rem;
+}
+
+.text-produto {
+    font-size: 2rem;
+}
+
+.pagina-toda {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 5rem;
+    background: rgba(0, 0, 0, 0.795);
+    z-index: 5000;
+    display: none;
+}
+
+.imagem-ampliada {
+    width: 100%;
+    height: 100%;
+
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    background: rgb(206, 204, 204);
+    padding: 2rem;
+}
+
+.logos-produto-ampliado-context {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0;
+}
+
+.logo-foto-ampliada {
+    padding: 1rem;
+    display: none;
+}
+
+.logo-foto-ampliada p{
+    font-size: 1.5rem;
+}
+
+.close {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -1.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Media Quarie */
 
 @media (max-width: 1071px) {
+
+    .links {
+        font-size: 3rem;
+    }    
+
+    .produtos {
+        display: block;
+    }
+
+    .cardapio {
+        display: none;
+    }
 
     .section-context {
         /* width: 100%; */
@@ -394,10 +484,12 @@ h4 {
     .grid-produtos {
         grid-template-columns: 1fr;
     }
-    .imagem {
+
+    .imagem-media {
     max-width: 100%;
     max-height: 100%;
     }
+
     .descricao {
         display: flex;
         flex-direction: column;
@@ -405,9 +497,7 @@ h4 {
     .main-context{
         max-width: 100%;
         min-width: 100%;
-        /* width: 120rem; */
         margin: 2rem 0;
-        /* padding: 0 0; */
     }
 
     .sobre-nos {
@@ -422,70 +512,53 @@ h4 {
     body {
         overflow-x: hidden;
     }
-    /* .links {
-        font-size: 1rem;
-    } */
-}
+
 
 @media (max-width: 991.98px) {
+
+    #menu-produtos{
+        display: block;
+    }
+
+    #menu-cardapio{
+        display: none;
+    }
+
     .fotos {
         grid-template-columns: repeat(2, minmax(1fr, 1fr));
     }
-
-    /* .logo-fixed, .nav__button, .nav__icon, .nav__checkbox {
-        display: block;
-    } */
 
     .menu-media-query {
         display: flex;
         position: fixed;
         top: 0;
         width: 100%;
-        height: 70px;
-        border-radius: var(--border-menu);
+        height: 7rem;
+        border-bottom: 0.1rem solid rgba(114, 112, 112, 0.144);
         background: white;
+        z-index: 1;
     }
-    
 
     .menu-context{
         border-right: var(--border-menu);
         background: white;
-        width: 20rem;
-        height: 100%;
+        width: 100%;
+        height: 5rem;
         left: 0;
-        /* top: 0; */
-        z-index: 1;
-        transform: translateX(-50rem);
+        top: 7rem;
+        z-index: 0;
+        transform: translateY(-50rem);
         transition: all 1s ease-in-out;
     }
 
     .menu-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* margin: 1rem auto;
-        max-width: 120rem; */
-        /* padding-top: 7rem; */
-        font-size: 3rem;
-        z-index: 1;
+        background: white;
+        z-index: 0;
     }
     
-    .menu-context .menu-content nav ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 1rem;
-        box-sizing: content-box;
-    }
-
-    .linha-vertical {
-        border-top: var(--border-menu);
-        border-right: none;
-        width: 5rem;
-        height: 0;
-    }
+    .links {
+        font-size: 2rem;
+    }    
 
     .menu-content h1 {
         margin: 1.5rem;
@@ -516,7 +589,7 @@ h4 {
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
-    background-color: rgba(138, 135, 135, 0.190);
+    background-color: rgba(138, 135, 135, 0.098);
     z-index: 3000;
     }
 
@@ -530,20 +603,16 @@ h4 {
         background-color: transparent;
       }
       
-      .nav__checkbox:checked + .nav__button .nav__icon::before {
-        transform: rotate(135deg);
-      }
-      
-      .nav__checkbox:checked + .nav__button .nav__icon::after {
-        transform: rotate(-135deg);
-      }
+    .nav__checkbox:checked + .nav__button .nav__icon::before {
+    transform: rotate(135deg);
+    }
+    
+    .nav__checkbox:checked + .nav__button .nav__icon::after {
+    transform: rotate(-135deg);
+    }
 
     .menu-context .menu-content h1 a {
         display: none;
-    }
-
-    .menu-context .menu-content nav {
-        margin-top: 5rem;
     }
 
     .logo-fixed {
@@ -568,7 +637,6 @@ h4 {
     top: 0%;
     left: 0%;
     transition: all 1s;
-    /* transition: all 0.2s; */
     }
 
 
@@ -592,6 +660,12 @@ h4 {
  
 
 @media (max-width: 560px) {
+
+    .entrega-ifood {
+        background: rgba(236, 72, 72, 0.150);
+        flex-basis: 0rem;
+    }
+
     .entregas {flex-direction: column;}
 
     .contato-context {
@@ -600,15 +674,3 @@ h4 {
         justify-content: center;
     }
 }   
-
-
-/* @media (max-width: 904px) {.descricao {flex-direction: column;}} */
-
-/* @media (min-width: 490px) and (max-width: 720px) {.caixa {width: 50%;}}
-
-@media (max-width: 490px) {.caixa {width: 100%;}}  */
-
-
-
-/* Setores */
-
