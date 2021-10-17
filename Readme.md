@@ -4,7 +4,7 @@ Site desenvolvido para divulgação da Padaria Lastro de Pedra, mostrando os pro
 
 ## Linguagens e bibliotecas utilizadas 
 
-O site foi feito em HTML e CSS.
+O site foi feito em HTML, CSS e JavaScript.
 
 ## Objetivos
 
